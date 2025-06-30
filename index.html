@@ -327,7 +327,7 @@
             font-weight: 500;
         }
 
-        .submit-btn, .export-btn {
+        .submit-btn {
             padding: 18px 40px;
             border: none;
             border-radius: 50px;
@@ -336,12 +336,8 @@
             cursor: pointer;
             transition: all 0.3s ease;
             font-family: inherit;
-            margin: 0 12px;
             position: relative;
             overflow: hidden;
-        }
-
-        .submit-btn {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             box-shadow: 0 8px 32px rgba(102, 126, 234, 0.4);
@@ -356,15 +352,11 @@
             transform: translateY(-1px);
         }
 
-        .export-btn {
-            background: linear-gradient(135deg, #00f5a0 0%, #00d9ff 100%);
-            color: white;
-            box-shadow: 0 8px 32px rgba(0, 245, 160, 0.4);
-        }
-
-        .export-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 48px rgba(0, 245, 160, 0.5);
+        .submit-btn:disabled {
+            background: #94a3b8;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
         }
 
         .loading {
@@ -468,9 +460,6 @@
                 <button type="submit" class="submit-btn" id="submitBtn">
                     Submit Feedback
                 </button>
-                <button type="button" class="export-btn" id="exportBtn">
-                    Export as JSON
-                </button>
             </div>
             
             </form>
@@ -566,7 +555,7 @@
             }
         }
 
-        // Export as JSON
+        // Export as JSON (removed from UI but keeping function for potential admin use)
         function exportAsJSON() {
             const data = collectFormData();
             const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
@@ -654,22 +643,6 @@
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
                 document.body.classList.remove('loading');
-            }
-        });
-
-        // Export button handler
-        document.getElementById('exportBtn').addEventListener('click', () => {
-            try {
-                exportAsJSON();
-                // Show brief success message for export
-                const exportBtn = document.getElementById('exportBtn');
-                const originalText = exportBtn.textContent;
-                exportBtn.textContent = '✓ Downloaded!';
-                setTimeout(() => {
-                    exportBtn.textContent = originalText;
-                }, 2000);
-            } catch (error) {
-                alert('Export failed. Please try again.');
             }
         });
 
