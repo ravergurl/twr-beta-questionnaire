@@ -10,284 +10,285 @@
             padding: 0;
             box-sizing: border-box;
         }
-    body {
-        font-family: 'Arial', sans-serif;
-        line-height: 1.6;
-        color: #333;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        min-height: 100vh;
-        padding: 20px;
-    }
 
-    .container {
-        max-width: 800px;
-        margin: 0 auto;
-        background: white;
-        border-radius: 15px;
-        box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        overflow: hidden;
-    }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
 
-    .header {
-        background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
-        color: white;
-        padding: 30px;
-        text-align: center;
-    }
-
-    .header h1 {
-        font-size: 2.5em;
-        margin-bottom: 10px;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    }
-
-    .header p {
-        font-size: 1.1em;
-        opacity: 0.9;
-    }
-
-    .form-content {
-        padding: 30px;
-    }
-
-    .section {
-        margin-bottom: 40px;
-        border-left: 4px solid #667eea;
-        padding-left: 20px;
-    }
-
-    .section h2 {
-        color: #667eea;
-        font-size: 1.5em;
-        margin-bottom: 20px;
-        border-bottom: 2px solid #eee;
-        padding-bottom: 10px;
-    }
-
-    .question {
-        margin-bottom: 25px;
-    }
-
-    .question label {
-        display: block;
-        font-weight: bold;
-        margin-bottom: 8px;
-        color: #444;
-    }
-
-    .required {
-        color: #e74c3c;
-    }
-
-    input[type="text"], 
-    input[type="number"], 
-    input[type="email"], 
-    textarea, 
-    select {
-        width: 100%;
-        padding: 12px 15px;
-        border: 2px solid #ddd;
-        border-radius: 8px;
-        font-size: 16px;
-        transition: all 0.3s ease;
-        background: #fafafa;
-    }
-
-    input[type="text"]:focus, 
-    input[type="number"]:focus, 
-    input[type="email"]:focus, 
-    textarea:focus, 
-    select:focus {
-        outline: none;
-        border-color: #667eea;
-        background: white;
-        box-shadow: 0 0 10px rgba(102, 126, 234, 0.1);
-    }
-
-    textarea {
-        min-height: 80px;
-        resize: vertical;
-    }
-
-    .checkbox-group, .radio-group {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 8px;
-    }
-
-    .checkbox-item, .radio-item {
-        display: flex;
-        align-items: center;
-        padding: 8px 12px;
-        border-radius: 6px;
-        transition: background-color 0.2s ease;
-        cursor: pointer;
-    }
-
-    .checkbox-item:hover, .radio-item:hover {
-        background-color: #f8f9ff;
-    }
-
-    input[type="checkbox"], input[type="radio"] {
-        width: 18px;
-        height: 18px;
-        margin-right: 12px;
-        cursor: pointer;
-        accent-color: #667eea;
-    }
-
-    .checkbox-item label, .radio-item label {
-        margin: 0;
-        cursor: pointer;
-        font-weight: normal;
-        flex: 1;
-    }
-
-    .rating-scale {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        margin-top: 8px;
-    }
-
-    .rating-scale input[type="range"] {
-        flex: 1;
-        height: 6px;
-        background: #ddd;
-        border-radius: 3px;
-        outline: none;
-        -webkit-appearance: none;
-    }
-
-    .rating-scale input[type="range"]::-webkit-slider-thumb {
-        -webkit-appearance: none;
-        width: 20px;
-        height: 20px;
-        background: #667eea;
-        border-radius: 50%;
-        cursor: pointer;
-    }
-
-    .rating-scale input[type="range"]::-moz-range-thumb {
-        width: 20px;
-        height: 20px;
-        background: #667eea;
-        border-radius: 50%;
-        cursor: pointer;
-        border: none;
-    }
-
-    .rating-display {
-        font-weight: bold;
-        color: #667eea;
-        min-width: 30px;
-        text-align: center;
-    }
-
-    .submit-section {
-        background: linear-gradient(135deg, #f8f9ff 0%, #e8ecff 100%);
-        padding: 30px;
-        text-align: center;
-        border-top: 1px solid #eee;
-    }
-
-    .submit-btn {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
-        padding: 15px 40px;
-        border: none;
-        border-radius: 50px;
-        font-size: 18px;
-        font-weight: bold;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
-    }
-
-    .submit-btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
-    }
-
-    .export-btn {
-        background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
-        color: white;
-        padding: 12px 30px;
-        border: none;
-        border-radius: 50px;
-        font-size: 16px;
-        font-weight: bold;
-        cursor: pointer;
-        margin-left: 15px;
-        transition: all 0.3s ease;
-        box-shadow: 0 5px 15px rgba(46, 204, 113, 0.3);
-    }
-
-    .export-btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 25px rgba(46, 204, 113, 0.4);
-    }
-
-    .progress-bar {
-        width: 100%;
-        height: 4px;
-        background: #eee;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-    }
-
-    .progress-fill {
-        height: 100%;
-        background: linear-gradient(90deg, #667eea, #764ba2);
-        width: 0%;
-        transition: width 0.3s ease;
-    }
-
-    @media (max-width: 768px) {
         .container {
-            margin: 10px;
-            border-radius: 10px;
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
         }
-        
+
         .header {
-            padding: 20px;
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
         }
-        
+
         .header h1 {
-            font-size: 2em;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
-        
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
         .form-content {
-            padding: 20px;
+            padding: 30px;
         }
-    }
-    .success-message {
-        background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
-        color: white;
-        padding: 20px;
-        border-radius: 10px;
-        text-align: center;
-        margin: 20px 0;
-        display: none;
-    }
 
-    .error-message {
-        background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
-        color: white;
-        padding: 20px;
-        border-radius: 10px;
-        text-align: center;
-        margin: 20px 0;
-        display: none;
-    }
+        .section {
+            margin-bottom: 40px;
+            border-left: 4px solid #667eea;
+            padding-left: 20px;
+        }
 
-    .loading {
-        opacity: 0.6;
-        pointer-events: none;
-    }
-</style>
+        .section h2 {
+            color: #667eea;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .question {
+            margin-bottom: 25px;
+        }
+
+        .question label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #444;
+        }
+
+        .required {
+            color: #e74c3c;
+        }
+
+        input[type="text"], 
+        input[type="number"], 
+        input[type="email"], 
+        textarea, 
+        select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background: #fafafa;
+        }
+
+        input[type="text"]:focus, 
+        input[type="number"]:focus, 
+        input[type="email"]:focus, 
+        textarea:focus, 
+        select:focus {
+            outline: none;
+            border-color: #667eea;
+            background: white;
+            box-shadow: 0 0 10px rgba(102, 126, 234, 0.1);
+        }
+
+        textarea {
+            min-height: 80px;
+            resize: vertical;
+        }
+
+        .checkbox-group, .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 8px;
+        }
+
+        .checkbox-item, .radio-item {
+            display: flex;
+            align-items: center;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: background-color 0.2s ease;
+            cursor: pointer;
+        }
+
+        .checkbox-item:hover, .radio-item:hover {
+            background-color: #f8f9ff;
+        }
+
+        input[type="checkbox"], input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            margin-right: 12px;
+            cursor: pointer;
+            accent-color: #667eea;
+        }
+
+        .checkbox-item label, .radio-item label {
+            margin: 0;
+            cursor: pointer;
+            font-weight: normal;
+            flex: 1;
+        }
+
+        .rating-scale {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 8px;
+        }
+
+        .rating-scale input[type="range"] {
+            flex: 1;
+            height: 6px;
+            background: #ddd;
+            border-radius: 3px;
+            outline: none;
+            -webkit-appearance: none;
+        }
+
+        .rating-scale input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+            background: #667eea;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .rating-scale input[type="range"]::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            background: #667eea;
+            border-radius: 50%;
+            cursor: pointer;
+            border: none;
+        }
+
+        .rating-display {
+            font-weight: bold;
+            color: #667eea;
+            min-width: 30px;
+            text-align: center;
+        }
+
+        .submit-section {
+            background: linear-gradient(135deg, #f8f9ff 0%, #e8ecff 100%);
+            padding: 30px;
+            text-align: center;
+            border-top: 1px solid #eee;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .export-btn {
+            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-left: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(46, 204, 113, 0.3);
+        }
+
+        .export-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(46, 204, 113, 0.4);
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 4px;
+            background: #eee;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                border-radius: 10px;
+            }
+            
+            .header {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .form-content {
+                padding: 20px;
+            }
+        }
+        .success-message {
+            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 20px 0;
+            display: none;
+        }
+
+        .error-message {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 20px 0;
+            display: none;
+        }
+
+        .loading {
+            opacity: 0.6;
+            pointer-events: none;
+        }
+    </style>
 </head>
 <body>
     <!-- Firebase SDKs -->
@@ -296,833 +297,1022 @@
     <div class="progress-bar">
         <div class="progress-fill" id="progressFill"></div>
     </div>
-<div class="container">
-    <div class="header">
-        <h1>🎵 Together We Rave 🎵</h1>
-        <p>Beta Testing Feedback Questionnaire</p>
-        <p style="font-size: 0.9em; margin-top: 10px;">Your feedback is crucial for our development and investor presentations!</p>
+
+    <div class="container">
+        <div class="header">
+            <h1>🎵 Together We Rave 🎵</h1>
+            <p>Beta Testing Feedback Questionnaire</p>
+            <p style="font-size: 0.9em; margin-top: 10px;">Your feedback is crucial for our development and investor presentations!</p>
+        </div>
+
+        <div class="form-content">
+            <form id="betaForm">
+            
+            <div class="success-message" id="successMessage">
+                <h3>🎉 Thank You!</h3>
+                <p>Your feedback has been successfully submitted. We really appreciate your time and insights!</p>
+            </div>
+            
+            <div class="error-message" id="errorMessage">
+                <h3>❌ Submission Error</h3>
+                <p id="errorText">Something went wrong. Please try again.</p>
+            </div>
+            
+            <div class="section">
+                <h2>Section 1: User Demographics & Background</h2>
+                
+                <div class="question">
+                    <label for="age">1. Age: <span class="required">*</span></label>
+                    <input type="number" id="age" name="age" min="18" max="100" required>
+                </div>
+
+                <div class="question">
+                    <label for="gender">2. Gender:</label>
+                    <input type="text" id="gender" name="gender">
+                </div>
+
+                <div class="question">
+                    <label for="location">3. Location (City, State):</label>
+                    <input type="text" id="location" name="location" placeholder="e.g., Los Angeles, CA">
+                </div>
+
+                <div class="question">
+                    <label>4. How long have you been part of the EDM/rave scene?</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="scene_new" name="scene_experience" value="new">
+                            <label for="scene_new">New to the scene (less than 1 year)</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="scene_1-3" name="scene_experience" value="1-3">
+                            <label for="scene_1-3">1-3 years</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="scene_3-5" name="scene_experience" value="3-5">
+                            <label for="scene_3-5">3-5 years</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="scene_5plus" name="scene_experience" value="5plus">
+                            <label for="scene_5plus">5+ years</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="scene_veteran" name="scene_experience" value="veteran">
+                            <label for="scene_veteran">I'm a veteran (10+ years)</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>5. How often do you attend EDM events/raves?</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="attend_weekly" name="attendance" value="weekly">
+                            <label for="attend_weekly">Weekly</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="attend_monthly" name="attendance" value="monthly">
+                            <label for="attend_monthly">Monthly</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="attend_few" name="attendance" value="few">
+                            <label for="attend_few">A few times per year</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="attend_rarely" name="attendance" value="rarely">
+                            <label for="attend_rarely">Rarely</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="attend_first" name="attendance" value="first">
+                            <label for="attend_first">This would be my first time</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>6. What other dating apps have you used? (Check all that apply)</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="app_tinder" name="other_apps" value="tinder">
+                            <label for="app_tinder">Tinder</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="app_bumble" name="other_apps" value="bumble">
+                            <label for="app_bumble">Bumble</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="app_hinge" name="other_apps" value="hinge">
+                            <label for="app_hinge">Hinge</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="app_radiate" name="other_apps" value="radiate">
+                            <label for="app_radiate">Radiate</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="app_mixd" name="other_apps" value="mixd">
+                            <label for="app_mixd">Mix'd</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="app_none" name="other_apps" value="none">
+                            <label for="app_none">None</label>
+                        </div>
+                    </div>
+                    <input type="text" name="other_apps_specify" placeholder="Other music-focused dating apps:" style="margin-top: 10px;">
+                </div>
+            </div>
+
+            <div class="submit-section">
+                <p style="margin-bottom: 20px; color: #666;">Thank you for taking the time to provide detailed feedback!</p>
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    Submit Feedback
+                </button>
+                <button type="button" class="export-btn" id="exportBtn">
+                    Export as JSON
+                </button>
+            </div>
+            
+            </form>
+        </div>
     </div>
 
-    <div class="form-content">
-        <form id="betaForm">
-        
-        <div class="success-message" id="successMessage">
-            <h3>🎉 Thank You!</h3>
-            <p>Your feedback has been successfully submitted. We really appreciate your time and insights!</p>
-        </div>
-        
-        <div class="error-message" id="errorMessage">
-            <h3>❌ Submission Error</h3>
-            <p id="errorText">Something went wrong. Please try again.</p>
-        </div>
-        
-        <div class="section">
-            <h2>Section 1: User Demographics & Background</h2>
+    <script>
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyAAzd5hc88PfJyi8kfUMlDYaXgPcVAbabs",
+            authDomain: "twr-beta.firebaseapp.com",
+            projectId: "twr-beta",
+            storageBucket: "twr-beta.firebasestorage.app",
+            messagingSenderId: "536472536437",
+            appId: "1:536472536437:web:e58431162246c1b1e0ff3c",
+            measurementId: "G-PK6HD2DJD1"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+
+        // Progress tracking
+        function updateProgress() {
+            const form = document.getElementById('betaForm');
+            const inputs = form.querySelectorAll('input, textarea, select');
+            const totalInputs = inputs.length;
+            let filledInputs = 0;
+
+            inputs.forEach(input => {
+                if (input.type === 'checkbox' || input.type === 'radio') {
+                    if (input.checked) filledInputs++;
+                } else if (input.value.trim() !== '') {
+                    filledInputs++;
+                }
+            });
+
+            const progress = (filledInputs / totalInputs) * 100;
+            document.getElementById('progressFill').style.width = `${progress}%`;
+        }
+
+        // Rating scale displays
+        function setupRatingDisplays() {
+            const ratingInputs = document.querySelectorAll('input[type="range"]');
+            ratingInputs.forEach(input => {
+                const display = document.getElementById(input.id + '_display');
+                if (display) {
+                    input.addEventListener('input', () => {
+                        display.textContent = input.value;
+                    });
+                }
+            });
+        }
+
+        // Collect all form data
+        function collectFormData() {
+            const formData = {};
+            const form = document.getElementById('betaForm');
+            const inputs = form.querySelectorAll('input, textarea, select');
+
+            inputs.forEach(input => {
+                if (input.type === 'checkbox') {
+                    if (!formData[input.name]) formData[input.name] = [];
+                    if (input.checked) {
+                        formData[input.name].push(input.value);
+                    }
+                } else if (input.type === 'radio') {
+                    if (input.checked) {
+                        formData[input.name] = input.value;
+                    }
+                } else {
+                    formData[input.name] = input.value;
+                }
+            });
+
+            // Add metadata
+            formData.submissionDate = new Date().toISOString();
+            formData.timestamp = Date.now();
             
-            <div class="question">
-                <label for="age">1. Age: <span class="required">*</span></label>
-                <input type="number" id="age" name="age" min="18" max="100" required>
-            </div>
+            return formData;
+        }
 
-            <div class="question">
-                <label for="gender">2. Gender:</label>
-                <input type="text" id="gender" name="gender">
-            </div>
+        // Submit to Firebase
+        async function submitToFirebase(data) {
+            try {
+                const docRef = await db.collection('beta-feedback').add(data);
+                console.log('Document written with ID: ', docRef.id);
+                return { success: true, id: docRef.id };
+            } catch (error) {
+                console.error('Error adding document: ', error);
+                return { success: false, error: error.message };
+            }
+        }
 
-            <div class="question">
-                <label for="location">3. Location (City, State):</label>
-                <input type="text" id="location" name="location" placeholder="e.g., Los Angeles, CA">
-            </div>
+        // Export as JSON
+        function exportAsJSON() {
+            const data = collectFormData();
+            const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `beta-feedback-${Date.now()}.json`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
 
-            <div class="question">
-                <label>4. How long have you been part of the EDM/rave scene?</label>
-                <div class="radio-group">
-                    <div class="radio-item">
-                        <input type="radio" id="scene_new" name="scene_experience" value="new">
-                        <label for="scene_new">New to the scene (less than 1 year)</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="scene_1-3" name="scene_experience" value="1-3">
-                        <label for="scene_1-3">1-3 years</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="scene_3-5" name="scene_experience" value="3-5">
-                        <label for="scene_3-5">3-5 years</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="scene_5plus" name="scene_experience" value="5plus">
-                        <label for="scene_5plus">5+ years</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="scene_veteran" name="scene_experience" value="veteran">
-                        <label for="scene_veteran">I'm a veteran (10+ years)</label>
-                    </div>
-                </div>
-            </div>
+        // Show success message
+        function showSuccess() {
+            document.getElementById('successMessage').style.display = 'block';
+            document.getElementById('errorMessage').style.display = 'none';
+            document.querySelector('.form-content').scrollTo({ top: 0, behavior: 'smooth' });
+        }
 
-            <div class="question">
-                <label>5. How often do you attend EDM events/raves?</label>
-                <div class="radio-group">
-                    <div class="radio-item">
-                        <input type="radio" id="attend_weekly" name="attendance" value="weekly">
-                        <label for="attend_weekly">Weekly</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="attend_monthly" name="attendance" value="monthly">
-                        <label for="attend_monthly">Monthly</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="attend_few" name="attendance" value="few">
-                        <label for="attend_few">A few times per year</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="attend_rarely" name="attendance" value="rarely">
-                        <label for="attend_rarely">Rarely</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="attend_first" name="attendance" value="first">
-                        <label for="attend_first">This would be my first time</label>
-                    </div>
-                </div>
-            </div>
+        // Show error message
+        function showError(message) {
+            document.getElementById('errorMessage').style.display = 'block';
+            document.getElementById('errorText').textContent = message;
+            document.getElementById('successMessage').style.display = 'none';
+            document.querySelector('.form-content').scrollTo({ top: 0, behavior: 'smooth' });
+        }
 
-            <div class="question">
-                <label>6. What other dating apps have you used? (Check all that apply)</label>
-                <div class="checkbox-group">
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="app_tinder" name="other_apps" value="tinder">
-                        <label for="app_tinder">Tinder</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="app_bumble" name="other_apps" value="bumble">
-                        <label for="app_bumble">Bumble</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="app_hinge" name="other_apps" value="hinge">
-                        <label for="app_hinge">Hinge</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="app_radiate" name="other_apps" value="radiate">
-                        <label for="app_radiate">Radiate</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="app_mixd" name="other_apps" value="mixd">
-                        <label for="app_mixd">Mix'd</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="app_none" name="other_apps" value="none">
-                        <label for="app_none">None</label>
-                    </div>
-                </div>
-                <input type="text" name="other_apps_specify" placeholder="Other music-focused dating apps:" style="margin-top: 10px;">
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Section 2: First Impressions & Onboarding</h2>
+        // Form submission handler
+        document.getElementById('betaForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
             
-            <div class="question">
-                <label for="first_impression">7. How would you rate your first impression of the app?</label>
-                <div class="rating-scale">
-                    <span>1</span>
-                    <input type="range" id="first_impression" name="first_impression" min="1" max="10" value="5">
-                    <span>10</span>
-                    <div class="rating-display" id="first_impression_display">5</div>
-                </div>
-            </div>
-
-            <div class="question">
-                <label>8. Was the sign-up process intuitive and easy?</label>
-                <div class="radio-group">
-                    <div class="radio-item">
-                        <input type="radio" id="signup_very_easy" name="signup_ease" value="very_easy">
-                        <label for="signup_very_easy">Very easy</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="signup_easy" name="signup_ease" value="easy">
-                        <label for="signup_easy">Somewhat easy</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="signup_neutral" name="signup_ease" value="neutral">
-                        <label for="signup_neutral">Neutral</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="signup_difficult" name="signup_ease" value="difficult">
-                        <label for="signup_difficult">Somewhat difficult</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="signup_very_difficult" name="signup_ease" value="very_difficult">
-                        <label for="signup_very_difficult">Very difficult</label>
-                    </div>
-                </div>
-                <textarea name="signup_comments" placeholder="Comments:" style="margin-top: 10px;"></textarea>
-            </div>
-
-            <div class="question">
-                <label>9. How clear was it what the app's purpose and target audience was?</label>
-                <div class="radio-group">
-                    <div class="radio-item">
-                        <input type="radio" id="purpose_immediately" name="purpose_clarity" value="immediately">
-                        <label for="purpose_immediately">Immediately clear</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="purpose_mostly" name="purpose_clarity" value="mostly">
-                        <label for="purpose_mostly">Mostly clear</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="purpose_somewhat" name="purpose_clarity" value="somewhat">
-                        <label for="purpose_somewhat">Somewhat unclear</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="purpose_very" name="purpose_clarity" value="very">
-                        <label for="purpose_very">Very unclear</label>
-                    </div>
-                </div>
-            </div>
-
-            <div class="question">
-                <label>10. Did you complete your full profile setup?</label>
-                <div class="radio-group">
-                    <div class="radio-item">
-                        <input type="radio" id="profile_complete" name="profile_completion" value="complete">
-                        <label for="profile_complete">Yes, completely</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="profile_partial" name="profile_completion" value="partial">
-                        <label for="profile_partial">Partially</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="profile_no" name="profile_completion" value="no">
-                        <label for="profile_no">No</label>
-                    </div>
-                </div>
-                <textarea name="profile_stop_reason" placeholder="If no, what stopped you?" style="margin-top: 10px;"></textarea>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Section 3: User Interface & Experience</h2>
+            const submitBtn = document.getElementById('submitBtn');
+            const originalText = submitBtn.textContent;
             
-            <div class="question">
-                <label for="design_rating">11. How would you rate the overall design and visual appeal?</label>
-                <div class="rating-scale">
-                    <span>1</span>
-                    <input type="range" id="design_rating" name="design_rating" min="1" max="10" value="5">
-                    <span>10</span>
-                    <div class="rating-display" id="design_rating_display">5</div>
-                </div>
-            </div>
-
-            <div class="question">
-                <label>12. How easy was it to navigate the app?</label>
-                <div class="radio-group">
-                    <div class="radio-item">
-                        <input type="radio" id="nav_very_easy" name="navigation" value="very_easy">
-                        <label for="nav_very_easy">Very easy</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="nav_easy" name="navigation" value="easy">
-                        <label for="nav_easy">Easy</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="nav_neutral" name="navigation" value="neutral">
-                        <label for="nav_neutral">Neutral</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="nav_difficult" name="navigation" value="difficult">
-                        <label for="nav_difficult">Difficult</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="nav_very_difficult" name="navigation" value="very_difficult">
-                        <label for="nav_very_difficult">Very difficult</label>
-                    </div>
-                </div>
-            </div>
-
-            <div class="question">
-                <label>13. Which features did you try? (Check all that apply)</label>
-                <div class="checkbox-group">
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="feature_browsing" name="features_tried" value="browsing">
-                        <label for="feature_browsing">Profile browsing/swiping</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="feature_messaging" name="features_tried" value="messaging">
-                        <label for="feature_messaging">Messaging</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="feature_events" name="features_tried" value="events">
-                        <label for="feature_events">Event integration</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="feature_community" name="features_tried" value="community">
-                        <label for="feature_community">Community features</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="feature_customization" name="features_tried" value="customization">
-                        <label for="feature_customization">Profile customization</label>
-                    </div>
-                </div>
-                <input type="text" name="features_other" placeholder="Other:" style="margin-top: 10px;">
-            </div>
-
-            <div class="question">
-                <label>14. Did you experience any technical issues or bugs?</label>
-                <div class="radio-group">
-                    <div class="radio-item">
-                        <input type="radio" id="bugs_none" name="technical_issues" value="none">
-                        <label for="bugs_none">No issues</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="bugs_minor" name="technical_issues" value="minor">
-                        <label for="bugs_minor">Minor issues</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="bugs_several" name="technical_issues" value="several">
-                        <label for="bugs_several">Several issues</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="bugs_major" name="technical_issues" value="major">
-                        <label for="bugs_major">Major issues preventing use</label>
-                    </div>
-                </div>
-                <textarea name="bug_description" placeholder="Please describe any issues:" style="margin-top: 10px;"></textarea>
-            </div>
-
-            <div class="question">
-                <label>15. How does the app perform compared to other dating apps you've used?</label>
-                <div class="radio-group">
-                    <div class="radio-item">
-                        <input type="radio" id="performance_much_better" name="app_performance" value="much_better">
-                        <label for="performance_much_better">Much better</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="performance_better" name="app_performance" value="better">
-                        <label for="performance_better">Better</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="performance_same" name="app_performance" value="same">
-                        <label for="performance_same">About the same</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="performance_worse" name="app_performance" value="worse">
-                        <label for="performance_worse">Worse</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="performance_much_worse" name="app_performance" value="much_worse">
-                        <label for="performance_much_worse">Much worse</label>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Section 4: Unique Value Proposition</h2>
+            // Show loading state
+            submitBtn.textContent = 'Submitting...';
+            submitBtn.disabled = true;
+            document.body.classList.add('loading');
             
-            <div class="question">
-                <label for="app_difference">16. What makes this app different from other dating apps?</label>
-                <textarea id="app_difference" name="app_difference" placeholder="Your thoughts..."></textarea>
-            </div>
+            try {
+                const formData = collectFormData();
+                
+                // Validate required fields
+                if (!formData.age) {
+                    throw new Error('Please fill in your age.');
+                }
+                
+                const result = await submitToFirebase(formData);
+                
+                if (result.success) {
+                    showSuccess();
+                    document.getElementById('betaForm').reset();
+                    updateProgress();
+                } else {
+                    throw new Error(result.error || 'Submission failed');
+                }
+                
+            } catch (error) {
+                showError(error.message);
+            } finally {
+                // Reset button state
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+                document.body.classList.remove('loading');
+            }
+        });
 
-            <div class="question">
-                <label>17. How well does the app serve the EDM/rave community specifically?</label>
-                <div class="radio-group">
-                    <div class="radio-item">
-                        <input type="radio" id="serve_extremely" name="community_service" value="extremely">
-                        <label for="serve_extremely">Extremely well</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="serve_very" name="community_service" value="very">
-                        <label for="serve_very">Very well</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="serve_moderately" name="community_service" value="moderately">
-                        <label for="serve_moderately">Moderately well</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="serve_not_well" name="community_service" value="not_well">
-                        <label for="serve_not_well">Not well</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="serve_poorly" name="community_service" value="poorly">
-                        <label for="serve_poorly">Poorly</label>
-                    </div>
-                </div>
-            </div>
+        // Export button handler
+        document.getElementById('exportBtn').addEventListener('click', exportAsJSON);
 
-            <div class="question">
-                <label>18. Would this app solve a real problem you have in meeting people in the EDM scene?</label>
-                <div class="radio-group">
-                    <div class="radio-item">
-                        <input type="radio" id="solve_definitely_yes" name="problem_solving" value="definitely_yes">
-                        <label for="solve_definitely_yes">Definitely yes</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="solve_probably_yes" name="problem_solving" value="probably_yes">
-                        <label for="solve_probably_yes">Probably yes</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="solve_maybe" name="problem_solving" value="maybe">
-                        <label for="solve_maybe">Maybe</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="solve_probably_no" name="problem_solving" value="probably_no">
-                        <label for="solve_probably_no">Probably no</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="solve_definitely_no" name="problem_solving" value="definitely_no">
-                        <label for="solve_definitely_no">Definitely no</label>
-                    </div>
-                </div>
-                <textarea name="solve_explanation" placeholder="Explain:" style="margin-top: 10px;"></textarea>
-            </div>
-
-            <div class="question">
-                <label>19. How important is it to you that a dating app focuses specifically on EDM/rave culture?</label>
-                <div class="radio-group">
-                    <div class="radio-item">
-                        <input type="radio" id="important_extremely" name="culture_importance" value="extremely">
-                        <label for="important_extremely">Extremely important</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="important_very" name="culture_importance" value="very">
-                        <label for="important_very">Very important</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="important_somewhat" name="culture_importance" value="somewhat">
-                        <label for="important_somewhat">Somewhat important</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="important_not_very" name="culture_importance" value="not_very">
-                        <label for="important_not_very">Not very important</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="important_not_at_all" name="culture_importance" value="not_at_all">
-                        <label for="important_not_at_all">Not important at all</label>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Section 5: Features & Functionality</h2>
+        // Add event listeners for progress tracking
+        document.addEventListener('DOMContentLoaded', () => {
+            setupRatingDisplays();
             
-            <div class="question">
-                <label for="features_like">20. What features do you like most?</label>
-                <textarea id="features_like" name="features_like" placeholder="Your thoughts..."></textarea>
-            </div>
-
-            <div class="question">
-                <label for="features_missing">21. What features are missing that you'd expect to see?</label>
-                <textarea id="features_missing" name="features_missing" placeholder="Your thoughts..."></textarea>
-            </div>
-
-            <div class="question">
-                <label>22. How would you rate the matching/discovery system?</label>
-                <div class="radio-group">
-                    <div class="radio-item">
-                        <input type="radio" id="matching_excellent" name="matching_system" value="excellent">
-                        <label for="matching_excellent">Excellent</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="matching_good" name="matching_system" value="good">
-                        <label for="matching_good">Good</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="matching_average" name="matching_system" value="average">
-                        <label for="matching_average">Average</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="matching_poor" name="matching_system" value="poor">
-                        <label for="matching_poor">Poor</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="matching_terrible" name="matching_system" value="terrible">
-                        <label for="matching_terrible">Terrible</label>
-                    </div>
-                </div>
-            </div>
-
-            <div class="question">
-                <label>23. If there's a messaging feature, how well does it work?</label>
-                <div class="radio-group">
-                    <div class="radio-item">
-                        <input type="radio" id="messaging_excellent" name="messaging_quality" value="excellent">
-                        <label for="messaging_excellent">Excellent</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="messaging_good" name="messaging_quality" value="good">
-                        <label for="messaging_good">Good</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="messaging_average" name="messaging_quality" value="average">
-                        <label for="messaging_average">Average</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="messaging_poor" name="messaging_quality" value="poor">
-                        <label for="messaging_poor">Poor</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="messaging_terrible" name="messaging_quality" value="terrible">
-                        <label for="messaging_terrible">Terrible</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="messaging_didnt_try" name="messaging_quality" value="didnt_try">
-                        <label for="messaging_didnt_try">Didn't try it</label>
-                    </div>
-                </div>
-            </div>
-
-            <div class="question">
-                <label>24. How useful are the EDM-specific features (artist preferences, festival attendance, etc.)?</label>
-                <div class="radio-group">
-                    <div class="radio-item">
-                        <input type="radio" id="edm_features_extremely" name="edm_features" value="extremely">
-                        <label for="edm_features_extremely">Extremely useful</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="edm_features_very" name="edm_features" value="very">
-                        <label for="edm_features_very">Very useful</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="edm_features_somewhat" name="edm_features" value="somewhat">
-                        <label for="edm_features_somewhat">Somewhat useful</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="edm_features_not_very" name="edm_features" value="not_very">
-                        <label for="edm_features_not_very">Not very useful</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="edm_features_not_at_all" name="edm_features" value="not_at_all">
-                        <label for="edm_features_not_at_all">Not useful at all</label>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Section 6: User Engagement & Retention</h2>
+            const form = document.getElementById('betaForm');
+            form.addEventListener('input', updateProgress);
+            form.addEventListener('change', updateProgress);
             
-            <div class="question">
-                <label for="continue_using">25. How likely are you to continue using this app?</label>
-                <div class="rating-scale">
-                    <span>1</span>
-                    <input type="range" id="continue_using" name="continue_using" min="1" max="10" value="5">
-                    <span>10</span>
-                    <div class="rating-display" id="continue_using_display">5</div>
+            updateProgress();
+        });
+    </script>
+</body>
+</html>
+
+            <div class="section">
+                <h2>Section 2: First Impressions & Onboarding</h2>
+                
+                <div class="question">
+                    <label for="first_impression">7. How would you rate your first impression of the app?</label>
+                    <div class="rating-scale">
+                        <span>1</span>
+                        <input type="range" id="first_impression" name="first_impression" min="1" max="10" value="5">
+                        <span>10</span>
+                        <div class="rating-display" id="first_impression_display">5</div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>8. Was the sign-up process intuitive and easy?</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="signup_very_easy" name="signup_ease" value="very_easy">
+                            <label for="signup_very_easy">Very easy</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="signup_easy" name="signup_ease" value="easy">
+                            <label for="signup_easy">Somewhat easy</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="signup_neutral" name="signup_ease" value="neutral">
+                            <label for="signup_neutral">Neutral</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="signup_difficult" name="signup_ease" value="difficult">
+                            <label for="signup_difficult">Somewhat difficult</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="signup_very_difficult" name="signup_ease" value="very_difficult">
+                            <label for="signup_very_difficult">Very difficult</label>
+                        </div>
+                    </div>
+                    <textarea name="signup_comments" placeholder="Comments:" style="margin-top: 10px;"></textarea>
+                </div>
+
+                <div class="question">
+                    <label>9. How clear was it what the app's purpose and target audience was?</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="purpose_immediately" name="purpose_clarity" value="immediately">
+                            <label for="purpose_immediately">Immediately clear</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="purpose_mostly" name="purpose_clarity" value="mostly">
+                            <label for="purpose_mostly">Mostly clear</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="purpose_somewhat" name="purpose_clarity" value="somewhat">
+                            <label for="purpose_somewhat">Somewhat unclear</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="purpose_very" name="purpose_clarity" value="very">
+                            <label for="purpose_very">Very unclear</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>10. Did you complete your full profile setup?</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="profile_complete" name="profile_completion" value="complete">
+                            <label for="profile_complete">Yes, completely</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="profile_partial" name="profile_completion" value="partial">
+                            <label for="profile_partial">Partially</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="profile_no" name="profile_completion" value="no">
+                            <label for="profile_no">No</label>
+                        </div>
+                    </div>
+                    <textarea name="profile_stop_reason" placeholder="If no, what stopped you?" style="margin-top: 10px;"></textarea>
                 </div>
             </div>
 
-            <div class="question">
-                <label>26. How often would you realistically open this app?</label>
-                <div class="radio-group">
-                    <div class="radio-item">
-                        <input type="radio" id="usage_multiple_daily" name="usage_frequency" value="multiple_daily">
-                        <label for="usage_multiple_daily">Multiple times per day</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="usage_daily" name="usage_frequency" value="daily">
-                        <label for="usage_daily">Daily</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="usage_few_weekly" name="usage_frequency" value="few_weekly">
-                        <label for="usage_few_weekly">A few times per week</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="usage_weekly" name="usage_frequency" value="weekly">
-                        <label for="usage_weekly">Weekly</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="usage_monthly" name="usage_frequency" value="monthly">
-                        <label for="usage_monthly">Monthly</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="usage_rarely" name="usage_frequency" value="rarely">
-                        <label for="usage_rarely">Rarely</label>
+            <div class="section">
+                <h2>Section 3: User Interface & Experience</h2>
+                
+                <div class="question">
+                    <label for="design_rating">11. How would you rate the overall design and visual appeal?</label>
+                    <div class="rating-scale">
+                        <span>1</span>
+                        <input type="range" id="design_rating" name="design_rating" min="1" max="10" value="5">
+                        <span>10</span>
+                        <div class="rating-display" id="design_rating_display">5</div>
                     </div>
                 </div>
-            </div>
 
-            <div class="question">
-                <label for="use_more_frequently">27. What would make you use this app more frequently?</label>
-                <textarea id="use_more_frequently" name="use_more_frequently" placeholder="Your thoughts..."></textarea>
-            </div>
-
-            <div class="question">
-                <label for="stop_using">28. What might cause you to stop using this app?</label>
-                <textarea id="stop_using" name="stop_using" placeholder="Your thoughts..."></textarea>
-            </div>
-
-            <div class="question">
-                <label>29. Did you successfully connect with anyone through the app?</label>
-                <div class="radio-group">
-                    <div class="radio-item">
-                        <input type="radio" id="connect_meaningful" name="connection_success" value="meaningful">
-                        <label for="connect_meaningful">Yes, had meaningful conversations</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="connect_superficial" name="connection_success" value="superficial">
-                        <label for="connect_superficial">Yes, but superficial interactions</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="connect_no_matches" name="connection_success" value="no_matches">
-                        <label for="connect_no_matches">No matches yet</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="connect_didnt_try" name="connection_success" value="didnt_try">
-                        <label for="connect_didnt_try">No, but didn't try long enough</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="connect_app_issues" name="connection_success" value="app_issues">
-                        <label for="connect_app_issues">No, the app didn't work well for me</label>
+                <div class="question">
+                    <label>12. How easy was it to navigate the app?</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="nav_very_easy" name="navigation" value="very_easy">
+                            <label for="nav_very_easy">Very easy</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="nav_easy" name="navigation" value="easy">
+                            <label for="nav_easy">Easy</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="nav_neutral" name="navigation" value="neutral">
+                            <label for="nav_neutral">Neutral</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="nav_difficult" name="navigation" value="difficult">
+                            <label for="nav_difficult">Difficult</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="nav_very_difficult" name="navigation" value="very_difficult">
+                            <label for="nav_very_difficult">Very difficult</label>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="section">
-            <h2>Section 7: Market Potential & Monetization</h2>
-            
-            <div class="question">
-                <label>30. Would you pay for premium features in this app?</label>
-                <div class="radio-group">
-                    <div class="radio-item">
-                        <input type="radio" id="pay_definitely_yes" name="willingness_to_pay" value="definitely_yes">
-                        <label for="pay_definitely_yes">Definitely yes</label>
+                <div class="question">
+                    <label>13. Which features did you try? (Check all that apply)</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="feature_browsing" name="features_tried" value="browsing">
+                            <label for="feature_browsing">Profile browsing/swiping</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="feature_messaging" name="features_tried" value="messaging">
+                            <label for="feature_messaging">Messaging</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="feature_events" name="features_tried" value="events">
+                            <label for="feature_events">Event integration</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="feature_community" name="features_tried" value="community">
+                            <label for="feature_community">Community features</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="feature_customization" name="features_tried" value="customization">
+                            <label for="feature_customization">Profile customization</label>
+                        </div>
                     </div>
-                    <div class="radio-item">
-                        <input type="radio" id="pay_probably_yes" name="willingness_to_pay" value="probably_yes">
-                        <label for="pay_probably_yes">Probably yes</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="pay_maybe" name="willingness_to_pay" value="maybe">
-                        <label for="pay_maybe">Maybe</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="pay_probably_no" name="willingness_to_pay" value="probably_no">
-                        <label for="pay_probably_no">Probably no</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="pay_definitely_no" name="willingness_to_pay" value="definitely_no">
-                        <label for="pay_definitely_no">Definitely no</label>
-                    </div>
+                    <input type="text" name="features_other" placeholder="Other:" style="margin-top: 10px;">
                 </div>
-            </div>
 
-            <div class="question">
-                <label>31. How much would you be willing to pay monthly for premium features?</label>
-                <div class="radio-group">
-                    <div class="radio-item">
-                        <input type="radio" id="price_free" name="price_point" value="free">
-                        <label for="price_free">$0 (free only)</label>
+                <div class="question">
+                    <label>14. Did you experience any technical issues or bugs?</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="bugs_none" name="technical_issues" value="none">
+                            <label for="bugs_none">No issues</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="bugs_minor" name="technical_issues" value="minor">
+                            <label for="bugs_minor">Minor issues</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="bugs_several" name="technical_issues" value="several">
+                            <label for="bugs_several">Several issues</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="bugs_major" name="technical_issues" value="major">
+                            <label for="bugs_major">Major issues preventing use</label>
+                        </div>
                     </div>
-                    <div class="radio-item">
-                        <input type="radio" id="price_1_5" name="price_point" value="1_5">
-                        <label for="price_1_5">$1-5</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="price_6_10" name="price_point" value="6_10">
-                        <label for="price_6_10">$6-10</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="price_11_15" name="price_point" value="11_15">
-                        <label for="price_11_15">$11-15</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="price_16_20" name="price_point" value="16_20">
-                        <label for="price_16_20">$16-20</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="price_20_plus" name="price_point" value="20_plus">
-                        <label for="price_20_plus">$20+</label>
-                    </div>
+                    <textarea name="bug_description" placeholder="Please describe any issues:" style="margin-top: 10px;"></textarea>
                 </div>
-            </div>
 
-            <div class="question">
-                <label for="premium_features">32. What premium features would be worth paying for?</label>
-                <textarea id="premium_features" name="premium_features" placeholder="Your thoughts..."></textarea>
-            </div>
-
-            <div class="question">
-                <label for="recommend_likelihood">33. How likely are you to recommend this app to friends in the EDM scene?</label>
-                <div class="rating-scale">
-                    <span>1</span>
-                    <input type="range" id="recommend_likelihood" name="recommend_likelihood" min="1" max="10" value="5">
-                    <span>10</span>
-                    <div class="rating-display" id="recommend_likelihood_display">5</div>
-                </div>
-            </div>
-
-            <div class="question">
-                <label>34. What's the size of your local EDM/rave community?</label>
-                <div class="radio-group">
-                    <div class="radio-item">
-                        <input type="radio" id="community_very_large" name="community_size" value="very_large">
-                        <label for="community_very_large">Very large (major city with lots of events)</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="community_large" name="community_size" value="large">
-                        <label for="community_large">Large</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="community_medium" name="community_size" value="medium">
-                        <label for="community_medium">Medium</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="community_small" name="community_size" value="small">
-                        <label for="community_small">Small</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="community_very_small" name="community_size" value="very_small">
-                        <label for="community_very_small">Very small/none</label>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Section 8: Competitive Analysis</h2>
-            
-            <div class="question">
-                <label for="compare_radiate">35. How does this app compare to Radiate?</label>
-                <textarea id="compare_radiate" name="compare_radiate" placeholder="Your thoughts..."></textarea>
-            </div>
-
-            <div class="question">
-                <label for="compare_general">36. How does this app compare to general dating apps like Tinder/Bumble?</label>
-                <textarea id="compare_general" name="compare_general" placeholder="Your thoughts..."></textarea>
-            </div>
-
-            <div class="question">
-                <label for="advantages_over">37. What advantages does this app have over competitors?</label>
-                <textarea id="advantages_over" name="advantages_over" placeholder="Your thoughts..."></textarea>
-            </div>
-
-            <div class="question">
-                <label for="competitor_advantages">38. What advantages do competitors have over this app?</label>
-                <textarea id="competitor_advantages" name="competitor_advantages" placeholder="Your thoughts..."></textarea>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Section 9: Detailed Feedback</h2>
-            
-            <div class="question">
-                <label for="top_improvement">39. What's the #1 thing you would improve about this app?</label>
-                <textarea id="top_improvement" name="top_improvement" placeholder="Your thoughts..."></textarea>
-            </div>
-
-            <div class="question">
-                <label for="top_love">40. What's the #1 thing you love about this app?</label>
-                <textarea id="top_love" name="top_love" placeholder="Your thoughts..."></textarea>
-            </div>
-
-            <div class="question">
-                <label for="ideal_experience">41. Describe your ideal EDM/rave dating app experience:</label>
-                <textarea id="ideal_experience" name="ideal_experience" placeholder="Your thoughts..."></textarea>
-            </div>
-
-            <div class="question">
-                <label for="additional_feedback">42. Any additional comments, suggestions, or feedback:</label>
-                <textarea id="additional_feedback" name="additional_feedback" placeholder="Your thoughts..."></textarea>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Section 10: Investor-Focused Questions</h2>
-            
-            <div class="question">
-                <label>43. Do you see this addressing a real market need?</label>
-                <div class="radio-group">
-                    <div class="radio-item">
-                        <input type="radio" id="market_need_strong" name="market_need" value="strong">
-                        <label for="market_need_strong">Strong market need</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="market_need_moderate" name="market_need" value="moderate">
-                        <label for="market_need_moderate">Moderate market need</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="market_need_some" name="market_need" value="some">
-                        <label for="market_need_some">Some market need</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="market_need_little" name="market_need" value="little">
-                        <label for="market_need_little">Little market need</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="market_need_no" name="market_need" value="no">
-                        <label for="market_need_no">No market need</label>
+                <div class="question">
+                    <label>15. How does the app perform compared to other dating apps you've used?</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="performance_much_better" name="app_performance" value="much_better">
+                            <label for="performance_much_better">Much better</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="performance_better" name="app_performance" value="better">
+                            <label for="performance_better">Better</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="performance_same" name="app_performance" value="same">
+                            <label for="performance_same">About the same</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="performance_worse" name="app_performance" value="worse">
+                            <label for="performance_worse">Worse</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="performance_much_worse" name="app_performance" value="much_worse">
+                            <label for="performance_much_worse">Much worse</label>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="question">
-                <label>44. How big do you think the potential user base is for this app?</label>
-                <div class="radio-group">
-                    <div class="radio-item">
-                        <input type="radio" id="user_base_massive" name="user_base_potential" value="massive">
-                        <label for="user_base_massive">Massive potential</label>
+            <div class="section">
+                <h2>Section 4: Unique Value Proposition</h2>
+                
+                <div class="question">
+                    <label for="app_difference">16. What makes this app different from other dating apps?</label>
+                    <textarea id="app_difference" name="app_difference" placeholder="Your thoughts..."></textarea>
+                </div>
+
+                <div class="question">
+                    <label>17. How well does the app serve the EDM/rave community specifically?</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="serve_extremely" name="community_service" value="extremely">
+                            <label for="serve_extremely">Extremely well</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="serve_very" name="community_service" value="very">
+                            <label for="serve_very">Very well</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="serve_moderately" name="community_service" value="moderately">
+                            <label for="serve_moderately">Moderately well</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="serve_not_well" name="community_service" value="not_well">
+                            <label for="serve_not_well">Not well</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="serve_poorly" name="community_service" value="poorly">
+                            <label for="serve_poorly">Poorly</label>
+                        </div>
                     </div>
-                    <div class="radio-item">
-                        <input type="radio" id="user_base_large" name="user_base_potential" value="large">
-                        <label for="user_base_large">Large potential</label>
+                </div>
+
+                <div class="question">
+                    <label>18. Would this app solve a real problem you have in meeting people in the EDM scene?</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="solve_definitely_yes" name="problem_solving" value="definitely_yes">
+                            <label for="solve_definitely_yes">Definitely yes</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="solve_probably_yes" name="problem_solving" value="probably_yes">
+                            <label for="solve_probably_yes">Probably yes</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="solve_maybe" name="problem_solving" value="maybe">
+                            <label for="solve_maybe">Maybe</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="solve_probably_no" name="problem_solving" value="probably_no">
+                            <label for="solve_probably_no">Probably no</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="solve_definitely_no" name="problem_solving" value="definitely_no">
+                            <label for="solve_definitely_no">Definitely no</label>
+                        </div>
                     </div>
-                    <div class="radio-item">
-                        <input type="radio" id="user_base_moderate" name="user_base_potential" value="moderate">
-                        <label for="user_base_moderate">Moderate potential</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="user_base_small" name="user_base_potential" value="small">
-                        <label for="user_base_small">Small potential</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="user_base_limited" name="user_base_potential" value="limited">
-                        <label for="user_base_limited">Very limited potential</label>
+                    <textarea name="solve_explanation" placeholder="Explain:" style="margin-top: 10px;"></textarea>
+                </div>
+
+                <div class="question">
+                    <label>19. How important is it to you that a dating app focuses specifically on EDM/rave culture?</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="important_extremely" name="culture_importance" value="extremely">
+                            <label for="important_extremely">Extremely important</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="important_very" name="culture_importance" value="very">
+                            <label for="important_very">Very important</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="important_somewhat" name="culture_importance" value="somewhat">
+                            <label for="important_somewhat">Somewhat important</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="important_not_very" name="culture_importance" value="not_very">
+                            <label for="important_not_very">Not very important</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="important_not_at_all" name="culture_importance" value="not_at_all">
+                            <label for="important_not_at_all">Not important at all</label>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="question">
-                <label for="success_concerns">45. What concerns would you have about this app's success?</label>
-                <textarea id="success_concerns" name="success_concerns" placeholder="Your thoughts..."></textarea>
-            </div>
+            <div class="section">
+                <h2>Section 5: Features & Functionality</h2>
+                
+                <div class="question">
+                    <label for="features_like">20. What features do you like most?</label>
+                    <textarea id="features_like" name="features_like" placeholder="Your thoughts..."></textarea>
+                </div>
 
-            <div class="question">
-                <label for="app_excitement">46. What excites you most about this app's potential?</label>
-                <textarea id="app_excitement" name="app_excitement" placeholder="Your thoughts..."></textarea>
-            </div>
-        </div>
+                <div class="question">
+                    <label for="features_missing">21. What features are missing that you'd expect to see?</label>
+                    <textarea id="features_missing" name="features_missing" placeholder="Your thoughts..."></textarea>
+                </div>
 
-        <div class="section">
-            <h2>Contact Information (Optional)</h2>
-            
-            <div class="question">
-                <label for="contact_email">Email (for follow-up):</label>
-                <input type="email" id="contact_email" name="contact_email" placeholder="your@email.com">
-            </div>
-
-            <div class="question">
-                <label for="social_media">Social media:</label>
-                <input type="text" id="social_media" name="social_media" placeholder="@username or profile link">
-            </div>
-
-            <div class="question">
-                <label>May we quote your feedback in investor materials? (We'll keep it anonymous)</label>
-                <div class="radio-group">
-                    <div class="radio-item">
-                        <input type="radio" id="quote_yes" name="quote_permission" value="yes">
-                        <label for="quote_yes">Yes, you may quote my feedback anonymously</label>
+                <div class="question">
+                    <label>22. How would you rate the matching/discovery system?</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="matching_excellent" name="matching_system" value="excellent">
+                            <label for="matching_excellent">Excellent</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="matching_good" name="matching_system" value="good">
+                            <label for="matching_good">Good</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="matching_average" name="matching_system" value="average">
+                            <label for="matching_average">Average</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="matching_poor" name="matching_system" value="poor">
+                            <label for="matching_poor">Poor</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="matching_terrible" name="matching_system" value="terrible">
+                            <label for="matching_terrible">Terrible</label>
+                        </div>
                     </div>
-                    <div class="radio-item">
-                        <input type="radio" id="quote_contact" name="quote_permission" value="contact">
-                        <label for="quote_contact">Yes, but please contact me first</label>
+                </div>
+
+                <div class="question">
+                    <label>23. If there's a messaging feature, how well does it work?</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="messaging_excellent" name="messaging_quality" value="excellent">
+                            <label for="messaging_excellent">Excellent</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="messaging_good" name="messaging_quality" value="good">
+                            <label for="messaging_good">Good</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="messaging_average" name="messaging_quality" value="average">
+                            <label for="messaging_average">Average</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="messaging_poor" name="messaging_quality" value="poor">
+                            <label for="messaging_poor">Poor</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="messaging_terrible" name="messaging_quality" value="terrible">
+                            <label for="messaging_terrible">Terrible</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="messaging_didnt_try" name="messaging_quality" value="didnt_try">
+                            <label for="messaging_didnt_try">Didn't try it</label>
+                        </div>
                     </div>
-                    <div class="radio-item">
-                        <input type="radio" id="quote_no" name="quote_permission" value="no">
-                        <label for="quote_no">No, please keep my feedback private</label>
+                </div>
+
+                <div class="question">
+                    <label>24. How useful are the EDM-specific features (artist preferences, festival attendance, etc.)?</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="edm_features_extremely" name="edm_features" value="extremely">
+                            <label for="edm_features_extremely">Extremely useful</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="edm_features_very" name="edm_features" value="very">
+                            <label for="edm_features_very">Very useful</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="edm_features_somewhat" name="edm_features" value="somewhat">
+                            <label for="edm_features_somewhat">Somewhat useful</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="edm_features_not_very" name="edm_features" value="not_very">
+                            <label for="edm_features_not_very">Not very useful</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="edm_features_not_at_all" name="edm_features" value="not_at_all">
+                            <label for="edm_features_not_at_all">Not useful at all</label>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+
+            <div class="section">
+                <h2>Section 6: User Engagement & Retention</h2>
+                
+                <div class="question">
+                    <label for="continue_using">25. How likely are you to continue using this app?</label>
+                    <div class="rating-scale">
+                        <span>1</span>
+                        <input type="range" id="continue_using" name="continue_using" min="1" max="10" value="5">
+                        <span>10</span>
+                        <div class="rating-display" id="continue_using_display">5</div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>26. How often would you realistically open this app?</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="usage_multiple_daily" name="usage_frequency" value="multiple_daily">
+                            <label for="usage_multiple_daily">Multiple times per day</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="usage_daily" name="usage_frequency" value="daily">
+                            <label for="usage_daily">Daily</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="usage_few_weekly" name="usage_frequency" value="few_weekly">
+                            <label for="usage_few_weekly">A few times per week</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="usage_weekly" name="usage_frequency" value="weekly">
+                            <label for="usage_weekly">Weekly</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="usage_monthly" name="usage_frequency" value="monthly">
+                            <label for="usage_monthly">Monthly</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="usage_rarely" name="usage_frequency" value="rarely">
+                            <label for="usage_rarely">Rarely</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label for="use_more_frequently">27. What would make you use this app more frequently?</label>
+                    <textarea id="use_more_frequently" name="use_more_frequently" placeholder="Your thoughts..."></textarea>
+                </div>
+
+                <div class="question">
+                    <label for="stop_using">28. What might cause you to stop using this app?</label>
+                    <textarea id="stop_using" name="stop_using" placeholder="Your thoughts..."></textarea>
+                </div>
+
+                <div class="question">
+                    <label>29. Did you successfully connect with anyone through the app?</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="connect_meaningful" name="connection_success" value="meaningful">
+                            <label for="connect_meaningful">Yes, had meaningful conversations</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="connect_superficial" name="connection_success" value="superficial">
+                            <label for="connect_superficial">Yes, but superficial interactions</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="connect_no_matches" name="connection_success" value="no_matches">
+                            <label for="connect_no_matches">No matches yet</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="connect_didnt_try" name="connection_success" value="didnt_try">
+                            <label for="connect_didnt_try">No, but didn't try long enough</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="connect_app_issues" name="connection_success" value="app_issues">
+                            <label for="connect_app_issues">No, the app didn't work well for me</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Section 7: Market Potential & Monetization</h2>
+                
+                <div class="question">
+                    <label>30. Would you pay for premium features in this app?</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="pay_definitely_yes" name="willingness_to_pay" value="definitely_yes">
+                            <label for="pay_definitely_yes">Definitely yes</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="pay_probably_yes" name="willingness_to_pay" value="probably_yes">
+                            <label for="pay_probably_yes">Probably yes</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="pay_maybe" name="willingness_to_pay" value="maybe">
+                            <label for="pay_maybe">Maybe</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="pay_probably_no" name="willingness_to_pay" value="probably_no">
+                            <label for="pay_probably_no">Probably no</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="pay_definitely_no" name="willingness_to_pay" value="definitely_no">
+                            <label for="pay_definitely_no">Definitely no</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>31. How much would you be willing to pay monthly for premium features?</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="price_free" name="price_point" value="free">
+                            <label for="price_free">$0 (free only)</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="price_1_5" name="price_point" value="1_5">
+                            <label for="price_1_5">$1-5</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="price_6_10" name="price_point" value="6_10">
+                            <label for="price_6_10">$6-10</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="price_11_15" name="price_point" value="11_15">
+                            <label for="price_11_15">$11-15</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="price_16_20" name="price_point" value="16_20">
+                            <label for="price_16_20">$16-20</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="price_20_plus" name="price_point" value="20_plus">
+                            <label for="price_20_plus">$20+</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label for="premium_features">32. What premium features would be worth paying for?</label>
+                    <textarea id="premium_features" name="premium_features" placeholder="Your thoughts..."></textarea>
+                </div>
+
+                <div class="question">
+                    <label for="recommend_likelihood">33. How likely are you to recommend this app to friends in the EDM scene?</label>
+                    <div class="rating-scale">
+                        <span>1</span>
+                        <input type="range" id="recommend_likelihood" name="recommend_likelihood" min="1" max="10" value="5">
+                        <span>10</span>
+                        <div class="rating-display" id="recommend_likelihood_display">5</div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>34. What's the size of your local EDM/rave community?</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="community_very_large" name="community_size" value="very_large">
+                            <label for="community_very_large">Very large (major city with lots of events)</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="community_large" name="community_size" value="large">
+                            <label for="community_large">Large</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="community_medium" name="community_size" value="medium">
+                            <label for="community_medium">Medium</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="community_small" name="community_size" value="small">
+                            <label for="community_small">Small</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="community_very_small" name="community_size" value="very_small">
+                            <label for="community_very_small">Very small/none</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Section 8: Competitive Analysis</h2>
+                
+                <div class="question">
+                    <label for="compare_radiate">35. How does this app compare to Radiate?</label>
+                    <textarea id="compare_radiate" name="compare_radiate" placeholder="Your thoughts..."></textarea>
+                </div>
+
+                <div class="question">
+                    <label for="compare_general">36. How does this app compare to general dating apps like Tinder/Bumble?</label>
+                    <textarea id="compare_general" name="compare_general" placeholder="Your thoughts..."></textarea>
+                </div>
+
+                <div class="question">
+                    <label for="advantages_over">37. What advantages does this app have over competitors?</label>
+                    <textarea id="advantages_over" name="advantages_over" placeholder="Your thoughts..."></textarea>
+                </div>
+
+                <div class="question">
+                    <label for="competitor_advantages">38. What advantages do competitors have over this app?</label>
+                    <textarea id="competitor_advantages" name="competitor_advantages" placeholder="Your thoughts..."></textarea>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Section 9: Detailed Feedback</h2>
+                
+                <div class="question">
+                    <label for="top_improvement">39. What's the #1 thing you would improve about this app?</label>
+                    <textarea id="top_improvement" name="top_improvement" placeholder="Your thoughts..."></textarea>
+                </div>
+
+                <div class="question">
+                    <label for="top_love">40. What's the #1 thing you love about this app?</label>
+                    <textarea id="top_love" name="top_love" placeholder="Your thoughts..."></textarea>
+                </div>
+
+                <div class="question">
+                    <label for="ideal_experience">41. Describe your ideal EDM/rave dating app experience:</label>
+                    <textarea id="ideal_experience" name="ideal_experience" placeholder="Your thoughts..."></textarea>
+                </div>
+
+                <div class="question">
+                    <label for="additional_feedback">42. Any additional comments, suggestions, or feedback:</label>
+                    <textarea id="additional_feedback" name="additional_feedback" placeholder="Your thoughts..."></textarea>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Section 10: Investor-Focused Questions</h2>
+                
+                <div class="question">
+                    <label>43. Do you see this addressing a real market need?</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="market_need_strong" name="market_need" value="strong">
+                            <label for="market_need_strong">Strong market need</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="market_need_moderate" name="market_need" value="moderate">
+                            <label for="market_need_moderate">Moderate market need</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="market_need_some" name="market_need" value="some">
+                            <label for="market_need_some">Some market need</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="market_need_little" name="market_need" value="little">
+                            <label for="market_need_little">Little market need</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="market_need_no" name="market_need" value="no">
+                            <label for="market_need_no">No market need</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>44. How big do you think the potential user base is for this app?</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="user_base_massive" name="user_base_potential" value="massive">
+                            <label for="user_base_massive">Massive potential</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="user_base_large" name="user_base_potential" value="large">
+                            <label for="user_base_large">Large potential</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="user_base_moderate" name="user_base_potential" value="moderate">
+                            <label for="user_base_moderate">Moderate potential</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="user_base_small" name="user_base_potential" value="small">
+                            <label for="user_base_small">Small potential</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="user_base_limited" name="user_base_potential" value="limited">
+                            <label for="user_base_limited">Very limited potential</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label for="success_concerns">45. What concerns would you have about this app's success?</label>
+                    <textarea id="success_concerns" name="success_concerns" placeholder="Your thoughts..."></textarea>
+                </div>
+
+                <div class="question">
+                    <label for="app_excitement">46. What excites you most about this app's potential?</label>
+                    <textarea id="app_excitement" name="app_excitement" placeholder="Your thoughts..."></textarea>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Contact Information (Optional)</h2>
+                
+                <div class="question">
+                    <label for="contact_email">Email (for follow-up):</label>
+                    <input type="email" id="contact_email" name="contact_email" placeholder="your@email.com">
+                </div>
+
+                <div class="question">
+                    <label for="social_media">Social media:</label>
+                    <input type="text" id="social_media" name="social_media" placeholder="@username or profile link">
+                </div>
+
+                <div class="question">
+                    <label>May we quote your feedback in investor materials? (We'll keep it anonymous)</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="quote_yes" name="quote_permission" value="yes">
+                            <label for="quote_yes">Yes, you may quote my feedback anonymously</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="quote_contact" name="quote_permission" value="contact">
+                            <label for="quote_contact">Yes, but please contact me first</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="quote_no" name="quote_permission" value="no">
+                            <label for="quote_no">No, please keep my feedback private</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
