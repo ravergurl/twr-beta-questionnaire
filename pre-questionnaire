@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎵 Rave Platform - Pre-Beta Survey</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .beta-info {
+            background: linear-gradient(135deg, #ffd700, #ffed4e);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .beta-info h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .form-section {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin: -30px -30px 20px -30px;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .checkbox-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+
+        .checkbox-item:hover {
+            background: #e9ecef;
+        }
+
+        .checkbox-item input[type="checkbox"],
+        .checkbox-item input[type="radio"] {
+            margin-right: 10px;
+            transform: scale(1.2);
+        }
+
+        .radio-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .radio-item {
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .radio-item:hover {
+            background: #e9ecef;
+        }
+
+        .radio-item input[type="radio"] {
+            margin-right: 8px;
+        }
+
+        .ranking-group {
+            display: grid;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .ranking-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .ranking-item select {
+            width: 80px;
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .submit-section {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px 40px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e9ecef;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+            border-radius: 4px;
+        }
+
+        .success-message {
+            display: none;
+            background: #d4edda;
+            color: #155724;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .error-message {
+            display: none;
+            background: #f8d7da;
+            color: #721c24;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .form-section {
+                padding: 20px;
+            }
+            
+            .section-title {
+                margin: -20px -20px 15px -20px;
+                font-size: 1.1em;
+            }
+            
+            .checkbox-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .radio-group {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .radio-item {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎵 Pre-Beta Survey</h1>
+            <p>Help us understand your rave lifestyle before you test our platform!</p>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            
+            <div class="beta-info">
+                <h3>🚀 What's Coming Next:</h3>
+                <p>After this survey, you'll get exclusive access to test our beta platform with features for marketplace, matching, DJ profiles, events, outfit recommendations, and safety tools!</p>
+            </div>
+        </div>
+
+        <form id="preBetaQuestionnaire">
+            <!-- Basic Information -->
+            <div class="form-section">
+                <div class="section-title">📋 Basic Information</div>
+                
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="location">Location *</label>
+                    <input type="text" id="location" name="location" placeholder="City, State/Country" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="age">Age Range *</label>
+                    <select id="age" name="age" required>
+                        <option value="">Select age range</option>
+                        <option value="18-21">18-21</option>
+                        <option value="22-25">22-25</option>
+                        <option value="26-30">26-30</option>
+                        <option value="31-35">31-35</option>
+                        <option value="36-40">36-40</option>
+                        <option value="40+">40+</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Rave Experience -->
+            <div class="form-section">
+                <div class="section-title">🎭 Your Rave Experience</div>
+                
+                <div class="form-group">
+                    <label>Experience Level *</label>
+                    <div class="radio-group">
+                        <label class="radio-item">
+                            <input type="radio" name="experienceLevel" value="newbie" required>
+                            New to the scene (0-1 years)
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="experienceLevel" value="regular" required>
+                            Regular raver (2-5 years)
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="experienceLevel" value="veteran" required>
+                            Veteran (5+ years)
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="experienceLevel" value="professional" required>
+                            Industry professional
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Music Preferences (Select all that apply) *</label>
+                    <div class="checkbox-grid">
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="musicPreferences" value="house" required>
+                            House
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="musicPreferences" value="techno" required>
+                            Techno
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="musicPreferences" value="hardstyle" required>
+                            Hardstyle
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="musicPreferences" value="trance" required>
+                            Trance
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="musicPreferences" value="bass" required>
+                            Bass/Dubstep
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="musicPreferences" value="dnb" required>
+                            Drum & Bass
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="musicPreferences" value="techhouse" required>
+                            Tech House
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="musicPreferences" value="progressive" required>
+                            Progressive
+                        </label>
+                    </div>
+                    <input type="text" name="musicOther" placeholder="Other genres..." style="margin-top: 10px;">
+                </div>
+                
+                <div class="form-group">
+                    <label>Event Types You Attend *</label>
+                    <div class="checkbox-grid">
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="eventTypes" value="festivals" required>
+                            Massive festivals (EDC, Tomorrowland, Ultra)
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="eventTypes" value="clubs" required>
+                            Local club nights
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="eventTypes" value="underground" required>
+                            Underground/warehouse events
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="eventTypes" value="outdoor" required>
+                            Outdoor/desert parties
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="eventTypes" value="intimate" required>
+                            Small intimate gatherings
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="eventTypes" value="camping" required>
+                            Multi-day camping festivals
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Monthly Event Frequency *</label>
+                    <div class="radio-group">
+                        <label class="radio-item">
+                            <input type="radio" name="eventFrequency" value="1-2" required>
+                            1-2 events
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="eventFrequency" value="3-5" required>
+                            3-5 events
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="eventFrequency" value="6+" required>
+                            6+ events
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="eventFrequency" value="seasonal" required>
+                            Seasonal only
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Current Pain Points -->
+            <div class="form-section">
+                <div class="section-title">😤 Current Challenges</div>
+                
+                <div class="form-group">
+                    <label>What are your biggest challenges in the rave scene? *</label>
+                    <div class="checkbox-grid">
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="challenges" value="finding-events" required>
+                            Finding events that match my taste
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="challenges" value="finding-people" required>
+                            Meeting like-minded people
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="challenges" value="outfit-planning" required>
+                            Planning outfits
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="challenges" value="safety-concerns" required>
+                            Safety concerns at events
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="challenges" value="expensive-gear" required>
+                            Expensive rave gear/clothing
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="challenges" value="group-coordination" required>
+                            Coordinating with friends/groups
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="challenges" value="ticket-access" required>
+                            Getting tickets to popular events
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="challenges" value="music-discovery" required>
+                            Discovering new artists/music
+                        </label>
+                    </div>
+                    <input type="text" name="challengesOther" placeholder="Other challenges..." style="margin-top: 10px;">
+                </div>
+                
+                <div class="form-group">
+                    <label for="biggestPainPoint">What's your #1 biggest pain point in rave culture right now? *</label>
+                    <textarea id="biggestPainPoint" name="biggestPainPoint" rows="3" required placeholder="Describe your most frustrating experience or ongoing challenge..."></textarea>
+                </div>
+            </div>
+
+            <!-- Shopping & Marketplace -->
+            <div class="form-section">
+                <div class="section-title">🛍️ Shopping Habits</div>
+                
+                <div class="form-group">
+                    <label>What do you typically buy for events? *</label>
+                    <div class="checkbox-grid">
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="purchaseItems" value="outfits" required>
+                            Outfits/clothing
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="purchaseItems" value="accessories" required>
+                            Accessories (kandi, LED items)
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="purchaseItems" value="tickets" required>
+                            Tickets/passes
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="purchaseItems" value="camping" required>
+                            Camping gear
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="purchaseItems" value="recovery" required>
+                            Recovery/health items
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="purchaseItems" value="art" required>
+                            Art/decorations
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>How do you currently shop for rave gear? *</label>
+                    <div class="checkbox-grid">
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="shoppingMethods" value="online-rave" required>
+                            Online rave retailers (iHeartRaves, etc.)
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="shoppingMethods" value="amazon" required>
+                            Amazon/general retailers
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="shoppingMethods" value="local-stores" required>
+                            Local stores
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="shoppingMethods" value="event-vendors" required>
+                            Event vendors
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="shoppingMethods" value="social-media" required>
+                            Social media/Instagram shops
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="shoppingMethods" value="diy" required>
+                            Make my own
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Monthly rave gear budget *</label>
+                    <div class="radio-group">
+                        <label class="radio-item">
+                            <input type="radio" name="budget" value="under50" required>
+                            Under $50
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="budget" value="50-150" required>
+                            $50-$150
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="budget" value="150-300" required>
+                            $150-$300
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="budget" value="300-500" required>
+                            $300-$500
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="budget" value="500+" required>
+                            $500+
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social & Safety -->
+            <div class="form-section">
+                <div class="section-title">🤝 Social & Safety</div>
+                
+                <div class="form-group">
+                    <label>What type of connections are you looking for? *</label>
+                    <div class="checkbox-grid">
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="connectionTypes" value="friends" required>
+                            Rave buddies/friends
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="connectionTypes" value="romantic" required>
+                            Romantic relationships
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="connectionTypes" value="crew" required>
+                            Event crew/group
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="connectionTypes" value="travel" required>
+                            Festival travel companions
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="connectionTypes" value="safety" required>
+                            Safety accountability partners
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="connectionTypes" value="music" required>
+                            Music discovery partners
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Safety concerns at events *</label>
+                    <div class="checkbox-grid">
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="safetyConcerns" value="separation" required>
+                            Getting separated from friends
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="safetyConcerns" value="substances" required>
+                            Drink spiking/substances
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="safetyConcerns" value="harassment" required>
+                            Harassment/unwanted attention
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="safetyConcerns" value="medical" required>
+                            Medical emergencies
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="safetyConcerns" value="transportation" required>
+                            Getting lost/transportation
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="safetyConcerns" value="theft" required>
+                            Theft/pickpocketing
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Would you use a rave buddy matching system for safety? *</label>
+                    <div class="radio-group">
+                        <label class="radio-item">
+                            <input type="radio" name="raveBuddyInterest" value="yes-definitely" required>
+                            Yes, definitely
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="raveBuddyInterest" value="yes-specific" required>
+                            Yes, for specific events/situations
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="raveBuddyInterest" value="maybe" required>
+                            Maybe, depends on features
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="raveBuddyInterest" value="no-friends" required>
+                            No, prefer existing friends
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="raveBuddyInterest" value="no-safety" required>
+                            No, safety concerns about strangers
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Platform Expectations -->
+            <div class="form-section">
+                <div class="section-title">🚀 Platform Expectations</div>
+                
+                <div class="form-group">
+                    <label>Which features are you most excited to test? (Select top 5) *</label>
+                    <div class="checkbox-grid">
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="excitedFeatures" value="marketplace" required>
+                            Marketplace for rave gear
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="excitedFeatures" value="matching" required>
+                            Friend/buddy matching
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="excitedFeatures" value="outfit-recs" required>
+                            AI outfit recommendations
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="excitedFeatures" value="dj-profiles" required>
+                            DJ/artist profiles
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="excitedFeatures" value="event-discovery" required>
+                            Event discovery
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="excitedFeatures" value="safety-checkins" required>
+                            Safety check-ins
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="excitedFeatures" value="group-coordination" required>
+                            Group coordination tools
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="excitedFeatures" value="music-discovery" required>
+                            Music discovery
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="excitedFeatures" value="photo-sharing" required>
+                            Photo sharing
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="excitedFeatures" value="reviews" required>
+                            Event/venue reviews
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="dreamFeature">If you could have one dream feature in a rave app, what would it be? *</label>
+                    <textarea id="dreamFeature" name="dreamFeature" rows="3" required placeholder="Describe your ideal feature that doesn't exist yet..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>Would you pay for premium features? *</label>
+                    <div class="radio-group">
+                        <label class="radio-item">
+                            <input type="radio" name="paymentWillingness" value="monthly" required>
+                            Yes, monthly subscription ($5-15)
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="paymentWillingness" value="annual" required>
+                            Yes, annual subscription
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="paymentWillingness" value="one-time" required>
+                            Yes, one-time purchases
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="paymentWillingness" value="specific" required>
+                            Only for specific features
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="paymentWillingness" value="ads" required>
+                            No, prefer free with ads
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="paymentWillingness" value="completely-free" required>
+                            No, should be completely free
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact & Beta Access -->
+            <div class="form-section">
+                <div class="section-title">📱 Beta Access</div>
+                
+                <div class="form-group">
+                    <label for="phoneNumber">Phone Number (optional)</label>
+                    <input type="text" id="phoneNumber" name="phoneNumber" placeholder="For beta access notifications">
+                </div>
+                
+                <div class="form-group">
+                    <label>Preferred contact method for beta updates *</label>
+                    <div class="radio-group">
+                        <label class="radio-item">
+                            <input type="radio" name="contactMethod" value="email" required>
+                            Email
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="contactMethod" value="sms" required>
+                            Text/SMS
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="contactMethod" value="discord" required>
+                            Discord
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="contactMethod" value="social" required>
+                            Social media
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="availability">When are you available to test the beta? *</label>
+                    <select id="availability" name="availability" required>
+                        <option value="">Select availability</option>
+                        <option value="immediately">Immediately</option>
+                        <option value="within-week">Within a week</option>
+                        <option value="within-month">Within a month</option>
+                        <option value="when-ready">When it's more polished</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="referral">How did you hear about this beta?</label>
+                    <input type="text" id="referral" name="referral" placeholder="Social media, friend, event, etc.">
+                </div>
+            </div>
+
+            <!-- Submit Section -->
+            <div class="submit-section">
+                <h3>Ready to Join the Beta Revolution? 🚀</h3>
+                <p style="margin: 20px 0; color: #666;">Submit this survey to get exclusive early access to our beta platform!</p>
+                
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    🎵 Join Beta Testing
+                </button>
+                
+                <div class="success-message" id="successMessage">
+                    <h3>🎉 Welcome to the Beta!</h3>
+                    <p>Your pre-beta survey has been submitted! We'll send you beta access details within 24-48 hours.</p>
+                    <p><strong>Next Steps:</strong></p>
+                    <ul style="text-align: left; margin: 15px 0;">
+                        <li>Check your email for beta access instructions</li>
+                        <li>Join our Discord community for updates</li>
+                        <li>Get ready to test and provide feedback!</li>
+                    </ul>
+                </div>
+                
+                <div class="error-message" id="errorMessage">
+                    <h3>⚠️ Submission Error</h3>
+                    <p>There was an issue submitting your survey. Please try again or contact us directly.</p>
+                </div>
+                
+                <p style="margin-top: 20px; font-size: 0.9em; color: #666;">
+                    <em>This beta is exclusive and confidential. Thank you for being part of our rave community! 💜</em>
+                </p>
+            </div>
+        </form>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+
+    <script>
+        // Firebase Configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyAAzd5hc88PfJyi8kfUMlDYaXgPcVAbabs",
+            authDomain: "twr-beta.firebaseapp.com",
+            projectId: "twr-beta",
+            storageBucket: "twr-beta.firebasestorage.app",
+            messagingSenderId: "536472536437",
+            appId: "1:536472536437:web:e58431162246c1b1e0ff3c",
+            measurementId: "G-PK6HD2DJD1"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+
+        // Progress tracking
+        const form = document.getElementById('preBetaQuestionnaire');
+        const progressFill = document.getElementById('progressFill');
+        const submitBtn = document.getElementById('submitBtn');
+        const successMessage = document.getElementById('successMessage');
+        const errorMessage = document.getElementById('errorMessage');
+
+        // Update progress bar
+        function updateProgress() {
+            const sections = document.querySelectorAll('.form-section');
+            let completedSections = 0;
+            
+            sections.forEach(section => {
+                const requiredInputs = section.querySelectorAll('input[required], select[required], textarea[required]');
+                let sectionCompleted = true;
+                
+                requiredInputs.forEach(input => {
+                    if (input.type === 'checkbox' || input.type === 'radio') {
+                        const groupName = input.name;
+                        const checkedInputs = section.querySelectorAll(`input[name="${groupName}"]:checked`);
+                        if (checkedInputs.length === 0) {
+                            sectionCompleted = false;
+                        }
+                    } else if (!input.value.trim()) {
+                        sectionCompleted = false;
+                    }
+                });
+                
+                if (sectionCompleted) {
+                    completedSections++;
+                }
+            });
+            
+            const progress = (completedSections / sections.length) * 100;
+            progressFill.style.width = progress + '%';
+        }
+
+        // Add event listeners for progress tracking
+        form.addEventListener('input', updateProgress);
+        form.addEventListener('change', updateProgress);
+
+        // Form submission handler
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            submitBtn.disabled = true;
+            submitBtn.textContent = '⏳ Submitting...';
+            
+            try {
+                // Collect form data
+                const formData = new FormData(form);
+                const data = {
+                    timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+                    submissionId: generateSubmissionId(),
+                    surveyType: 'pre-beta',
+                };
+
+                // Basic info
+                data.name = formData.get('name');
+                data.email = formData.get('email');
+                data.location = formData.get('location');
+                data.age = formData.get('age');
+
+                // Rave experience
+                data.experienceLevel = formData.get('experienceLevel');
+                data.musicPreferences = formData.getAll('musicPreferences');
+                data.musicOther = formData.get('musicOther');
+                data.eventTypes = formData.getAll('eventTypes');
+                data.eventFrequency = formData.get('eventFrequency');
+
+                // Challenges
+                data.challenges = formData.getAll('challenges');
+                data.challengesOther = formData.get('challengesOther');
+                data.biggestPainPoint = formData.get('biggestPainPoint');
+
+                // Shopping
+                data.purchaseItems = formData.getAll('purchaseItems');
+                data.shoppingMethods = formData.getAll('shoppingMethods');
+                data.budget = formData.get('budget');
+
+                // Social & Safety
+                data.connectionTypes = formData.getAll('connectionTypes');
+                data.safetyConcerns = formData.getAll('safetyConcerns');
+                data.raveBuddyInterest = formData.get('raveBuddyInterest');
+
+                // Platform expectations
+                data.excitedFeatures = formData.getAll('excitedFeatures');
+                data.dreamFeature = formData.get('dreamFeature');
+                data.paymentWillingness = formData.get('paymentWillingness');
+
+                // Beta access
+                data.phoneNumber = formData.get('phoneNumber');
+                data.contactMethod = formData.get('contactMethod');
+                data.availability = formData.get('availability');
+                data.referral = formData.get('referral');
+
+                // Submit to Firebase
+                await db.collection('preBetaResponses').add(data);
+
+                // Show success message
+                form.style.display = 'none';
+                successMessage.style.display = 'block';
+                
+                // Scroll to success message
+                successMessage.scrollIntoView({ behavior: 'smooth' });
+
+                // Clear saved draft
+                localStorage.removeItem('preBetaQuestionnaireDraft');
+
+            } catch (error) {
+                console.error('Error submitting form:', error);
+                errorMessage.style.display = 'block';
+                submitBtn.disabled = false;
+                submitBtn.textContent = '🎵 Join Beta Testing';
+            }
+        });
+
+        // Generate unique submission ID
+        function generateSubmissionId() {
+            return 'prebeta_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+        }
+
+        // Validate required checkbox groups
+        function validateCheckboxGroups() {
+            const requiredGroups = [
+                'musicPreferences',
+                'eventTypes', 
+                'challenges',
+                'purchaseItems',
+                'shoppingMethods',
+                'connectionTypes',
+                'safetyConcerns',
+                'excitedFeatures'
+            ];
+
+            let isValid = true;
+
+            requiredGroups.forEach(groupName => {
+                const checkboxes = document.querySelectorAll(`input[name="${groupName}"]:checked`);
+                if (checkboxes.length === 0) {
+                    isValid = false;
+                    // Highlight the group
+                    const container = document.querySelector(`input[name="${groupName}"]`).closest('.form-group');
+                    container.style.border = '2px solid #ff6b6b';
+                    setTimeout(() => {
+                        container.style.border = 'none';
+                    }, 3000);
+                }
+            });
+
+            return isValid;
+        }
+
+        // Add validation before submit
+        form.addEventListener('submit', (e) => {
+            if (!validateCheckboxGroups()) {
+                e.preventDefault();
+                alert('Please complete all required sections (marked with *)');
+                return false;
+            }
+        });
+
+        // Auto-save to localStorage
+        function autoSave() {
+            const formData = new FormData(form);
+            const data = {};
+            
+            for (let [key, value] of formData.entries()) {
+                if (data[key]) {
+                    if (Array.isArray(data[key])) {
+                        data[key].push(value);
+                    } else {
+                        data[key] = [data[key], value];
+                    }
+                } else {
+                    data[key] = value;
+                }
+            }
+            
+            localStorage.setItem('preBetaQuestionnaireDraft', JSON.stringify(data));
+        }
+
+        // Load saved data on page load
+        function loadSavedData() {
+            const saved = localStorage.getItem('preBetaQuestionnaireDraft');
+            if (saved) {
+                try {
+                    const data = JSON.parse(saved);
+                    Object.keys(data).forEach(key => {
+                        const inputs = document.querySelectorAll(`[name="${key}"]`);
+                        inputs.forEach(input => {
+                            if (input.type === 'checkbox' || input.type === 'radio') {
+                                if (Array.isArray(data[key])) {
+                                    input.checked = data[key].includes(input.value);
+                                } else {
+                                    input.checked = input.value === data[key];
+                                }
+                            } else {
+                                input.value = data[key];
+                            }
+                        });
+                    });
+                    updateProgress();
+                } catch (e) {
+                    console.log('Could not load saved data');
+                }
+            }
+        }
+
+        // Auto-save every 30 seconds
+        setInterval(autoSave, 30000);
+
+        // Load saved data when page loads
+        window.addEventListener('load', loadSavedData);
+
+        // Initialize progress on page load
+        updateProgress();
+    </script>
+</body>
+</html>
